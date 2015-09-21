@@ -3,8 +3,7 @@
 */
 package main
 
-func InsertionSort(array *[]int) {
-	myArray := *array
+func InsertionSort(myArray []int) {
 	for i := 1; i < len(myArray); i++ {
 		val := myArray[i]
 		j := i - 1

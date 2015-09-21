@@ -24,12 +24,12 @@ func main() {
 	//Selection sort
 	array = []int{7, 1, 9, 0, 2, 14, 10, 11, 4, 13}
 	fmt.Printf("Array before sorting %v \n", array)
-	selectionSort(&array)
+	selectionSort(array)
 	fmt.Printf("Selection sorted array %v \n", array)
 
 	//Insertion sort
 	array = []int{7, 1, 9, 0, 2, 14, 10, 11, 4, 13}
 	fmt.Printf("Array before sorting %v \n", array)
-	InsertionSort(&array)
+	InsertionSort(array)
 	fmt.Printf("Insertion sorted array %v \n", array)
 }

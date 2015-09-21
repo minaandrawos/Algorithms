@@ -18,8 +18,7 @@ func findMinimumIndex(array []int, startIndex int) int {
 	return retVal
 }
 
-func selectionSort(array *[]int) {
-	myArray := *array
+func selectionSort(myArray []int) {
 	for i := 0; i <= len(myArray)-1; i++ {
 		m := findMinimumIndex(myArray, i)
 		temp := myArray[i]
