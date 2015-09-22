@@ -14,37 +14,6 @@ package main
 
 import "fmt"
 
-func StringPermutations(input string, firstIndex int, secondIndex int, result *[]string) {
-
-	if firstIndex == len(input) {
-		return
-	}
-
-	fmt.Printf("first index %d, second index %d \n", firstIndex, secondIndex)
-	input = goCharSwap(input, firstIndex, secondIndex)
-	*result = append(*result, input)
-
-	if secondIndex+1 != firstIndex {
-		secondIndex++
-	} else {
-		secondIndex += 2
-	}
-
-	if secondIndex >= len(input) {
-		secondIndex = 0
-		firstIndex++
-	}
-
-	StringPermutations(input, firstIndex, secondIndex, result)
-}
-
-func goCharSwap(s string, firstIndex int, secondIndex int) string {
-	inputBytes := []rune(s)
-	temp := inputBytes[firstIndex]
-	inputBytes[firstIndex] = inputBytes[secondIndex]
-	inputBytes[secondIndex] = temp
-	return string(inputBytes)
-}
 
 func startPermutation(input string) {
 	p := &Permutation{
